@@ -1,0 +1,162 @@
+/* font-family: "Roboto", sans-serif; */
+/* font-family: "Playfair Display", serif; */
+/* font-family: "Inconsolata", monospace; */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+.nav-container {
+  height: 130px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.nav-container .left {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  position: relative;
+}
+
+.nav-container .left :is(.about, .service, .events) :first-child {
+  cursor: pointer;
+}
+.nav-container
+  .left
+  :is(.about, .service, .events)
+  :is(.first-drop-down, .second-drop-down, .third-drop-down)
+  > div {
+  cursor: pointer;
+}
+.nav-container .left :is(.about, .service, .events) :first-child:hover {
+  color: #ea580c;
+}
+.nav-container
+  .left
+  :is(.about, .service, .events)
+  :is(.first-drop-down, .second-drop-down, .third-drop-down)
+  > div:hover {
+  color: #ea580c;
+}
+
+/* left dropdown info */
+/* about */
+.about .first-drop-down {
+  display: none;
+  width: 200px;
+  background-color: rgb(255, 255, 255, 0.7);
+  padding: 10px 20px 20px 20px;
+  position: absolute;
+  top: 15px;
+  left: -25px;
+  border-radius: 15px;
+}
+.about .first-drop-down div {
+  padding: 5px;
+}
+.nav-container .left .about :first-child:hover + .first-drop-down {
+  display: block;
+}
+.about .first-drop-down:hover {
+  display: block;
+}
+/* services */
+.service .second-drop-down {
+  display: none;
+  width: 200px;
+  background-color: rgb(255, 255, 255, 0.7);
+  padding: 10px 20px 20px 20px;
+  position: absolute;
+  top: 15px;
+  left: 90px;
+  border-radius: 15px;
+}
+.service .second-drop-down div {
+  padding: 5px;
+}
+.nav-container .left .service :first-child:hover + .second-drop-down {
+  display: block;
+}
+.service .second-drop-down:hover {
+  display: block;
+}
+/* events */
+.events .third-drop-down {
+  display: none;
+  width: 130px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px 20px 20px;
+  position: absolute;
+  top: 15px;
+  left: 225px;
+  border-radius: 15px;
+}
+.events .third-drop-down div {
+  padding: 5px;
+}
+.nav-container .left .events :first-child:hover + .third-drop-down {
+  display: block;
+}
+.events .third-drop-down:hover {
+  display: block;
+}
+/* .middle nav */
+.nav-container .middle {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-family: "Inconsolata", monospace;
+}
+.nav-container .middle :first-child {
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.nav-container .middle :last-child {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: rgb(190, 190, 190);
+}
+.nav-container .right {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.nav-container .right div {
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.nav-container .right div:hover {
+  color: #ea580c;
+}
+
+.nav-container .right :last-child {
+  background-color: #c2410c;
+  padding: 5px 10px;
+  color: #ffffff;
+  border-radius: 15px;
+}
+.nav-container .right :last-child:hover {
+  color: #ffffff;
+  background-color: #ea580c;
+  transition: all 0.2s linear;
+}
