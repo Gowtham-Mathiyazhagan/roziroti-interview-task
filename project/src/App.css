@@ -238,10 +238,23 @@ video {
   display: inline-block;
   transform: translateX(8px);
 }
-.button .bi-arrow-right {
+.welcome-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.welcome-right img {
+.welcome-right .carousel {
+  height: 450px;
+  width: 600px;
+  overflow-x: scroll;
+  /* scrollbar-width: none; */
+  background-color: aqua;
+}
+.welcome-right .carousel .carousel-img {
   height: 450px;
   width: 600px;
   border-top-left-radius: 300px;
+  background-color: rgb(38, 43, 43);
+
 }
