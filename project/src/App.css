@@ -241,20 +241,39 @@ video {
 .welcome-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 .welcome-right .carousel {
+  display: flex;
   height: 450px;
-  width: 600px;
-  overflow-x: scroll;
-  /* scrollbar-width: none; */
-  background-color: aqua;
+  width: 650px;
+  scrollbar-width: none;
+  margin-bottom: 20px;
 }
 .welcome-right .carousel .carousel-img {
-  height: 450px;
-  width: 600px;
+  /* display: none; */
+  opacity: 0;
+  height: 100%;
+  width: 0%;
   border-top-left-radius: 300px;
-  background-color: rgb(38, 43, 43);
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+.welcome-right .carousel .carousel-img.carousel-block {
+  /* display: block; */
+  opacity: 1;
+  width: 100%;
+}
 
+.welcome-right .indicators span .indicator {
+  height: 2.2px;
+  width: 30px;
+  background-color: #000000;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+}
+.welcome-right .indicators span .indicator.indicator-block {
+  background-color: var(--primary-btn-color);
 }
