@@ -16,6 +16,7 @@ html {
 :root {
   --primary-btn-color: #c2410c;
   --primary-btn-color-hover: #ea580c;
+  --primary-txt-color:#14532d;
 }
 .nav-container {
   height: 130px;
@@ -238,6 +239,8 @@ video {
   display: inline-block;
   transform: translateX(8px);
 }
+
+/* Right side */
 .welcome-right {
   display: flex;
   flex-direction: column;
@@ -277,3 +280,6 @@ video {
 .welcome-right .indicators span .indicator.indicator-block {
   background-color: var(--primary-btn-color);
 }
+
+/* Magical components styling */
+
