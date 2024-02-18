@@ -25,13 +25,13 @@ const Welcome = () => {
       <div className="welcome-right">
         <div className="carousel">
           {data.map((val, ind) => {
-            return <img src={val.img} alt={val.alt} className={block === ind ? "carousel-img carousel-block" :"carousel-img"} />;
+            return <img key={ind.toString()} src={val.img} alt={val.alt} className={block === ind ? "carousel-img carousel-block" :"carousel-img"} />;
           })}
         </div>
         <div className="indicators">
           <span>
             {data.map((_, index) => {
-             return <button className={block === index ? "indicator indicator-block" : "indicator"} onClick={()=>setBlock(index)}></button>;
+             return <button key={index.toString()} className={block === index ? "indicator indicator-block" : "indicator"} onClick={()=>setBlock(index)}></button>;
             })}
           </span>
         </div>
