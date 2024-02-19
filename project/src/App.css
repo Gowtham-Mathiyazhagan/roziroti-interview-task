@@ -2,6 +2,7 @@
 /* font-family: "Playfair Display", serif; */
 /* font-family: "Inconsolata", monospace; */
 /* font-family: "Poppins", sans-serif; */
+/* font-weight : 500 */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -214,7 +215,7 @@ video {
 .welcome-left h1 {
   font-family: "Playfair Display", serif;
   font-size: 90px;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
   color: #14532d;
   line-height: 90px;
@@ -333,7 +334,7 @@ Magical components styling
 .magical-right .top-title {
   font-family: "Playfair Display", serif;
   font-size: 85px;
-  font-weight: 500;
+  font-weight: 400;
   text-align: left;
   color: var(--primary-txt-color);
 }
@@ -363,8 +364,7 @@ Magical components styling
 .magical-right .group-info .details-info {
   width: 400px;
 }
-.magical-right .group-info .details-info {
-}
+
 .magical-right .group-info .details-info .sub-title > div {
   font-size: 20px;
   font-weight: 600;
@@ -402,7 +402,7 @@ Magical components styling
   transform: translateX(8px);
 }
 .magical-right .group-info .details-info .sub-title {
-  /* display: none; */
+  /* display: block; */
   opacity: 0;
   transition: opacity 0.5s linear;
   position: absolute;
@@ -410,4 +410,96 @@ Magical components styling
 .magical-right .group-info .details-info .sub-title.show-magic {
   /* display: block; */
   opacity: 1;
+  z-index: 5;
+}
+
+/* 
+********
+Venues components styling 
+********
+*/
+.venues-component {
+  width: 100%;
+  height: 200vh;
+}
+
+.venues-component .full-vw-bg img {
+  height: 110vh;
+  width: 100vw;
+}
+
+.venues-component .circle-venue {
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 650px;
+  width: 650px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.venues-component .circle-venue .circle-elements {
+  position: absolute;
+  top: 22%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.venues-component .circle-venue .circle-elements h6 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #14532d;
+  padding-bottom: 50px;
+}
+.venues-component .circle-venue .circle-elements h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 90px;
+  font-weight: 400;
+  text-align: center;
+  color: #14532d;
+  line-height: 90px;
+}
+.venues-component .circle-venue .circle-elements p {
+  font-size: 13px;
+  font-weight: 200;
+  text-align: center;
+  line-height: 27px;
+  font-family: "Poppins", sans-serif;
+  width: 450px;
+  margin: 30px 0;
+}
+
+.venues-component .circle-venue .circle-elements .button {
+  background-color: var(--primary-btn-color);
+  padding: 8px 25px;
+  color: #ffffff;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.venues-component .circle-venue .circle-elements .button:hover {
+  background-color: var(--primary-btn-color-hover);
+}
+.venues-component
+  .circle-venue
+  .circle-elements
+  .button:hover
+  > .bi-arrow-right {
+  display: inline-block;
+  transform: translateX(8px);
+}
+
+/* 
+********
+Carousel components styling 
+********
+*/
+
+.carousels-container{
+  height: 100vh;
+  width: 100vw;
+  background-color: aqua;
 }
