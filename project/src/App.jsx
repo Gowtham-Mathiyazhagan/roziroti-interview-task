@@ -5,6 +5,7 @@ import Magical from './components/Magical'
 import Venues from './components/Venues'
 import Carousel from './components/Carousel'
 import Business from './components/Business'
+import GreetFood from './components/GreetFood'
 const App = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const App = () => {
     <Venues/>
     <Carousel/>
     <Business/>
+    <GreetFood/>
     </>
   )
 }

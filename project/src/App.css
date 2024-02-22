@@ -644,3 +644,51 @@ Business components styling
   width: 100vw;
   padding: 0 70px;
 }
+
+.greet-food-component {
+}
+.greet-food-component .title-and-para {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.greet-food-component .title-and-para h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 90px;
+  font-weight: 400;
+  text-align: center;
+  color: #14532d;
+  line-height: 90px;
+  /* width: 1100px; */
+}
+
+.greet-food-component .title-and-para p {
+  font-size: 15px;
+  font-weight: 200;
+  text-align: center;
+  line-height: 27px;
+  font-family: "Poppins", sans-serif;
+  width: 850px;
+  margin: 30px 0;
+}
+.greet-food-component .title-and-para .button {
+}
+
+.greet-food-component .title-and-para .button {
+  background-color: var(--primary-btn-color);
+  padding: 8px 25px;
+  color: #ffffff;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.greet-food-component .title-and-para .button:hover {
+  background-color: var(--primary-btn-color-hover);
+}
+
+.greet-food-component .title-and-para .button:hover > .bi-arrow-right {
+  display: inline-block;
+  transform: translateX(8px);
+}
