@@ -4,6 +4,7 @@ import Welcome from './components/Welcome'
 import Magical from './components/Magical'
 import Venues from './components/Venues'
 import Carousel from './components/Carousel'
+import Business from './components/Business'
 const App = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const App = () => {
     <Magical/>
     <Venues/>
     <Carousel/>
+    <Business/>
     </>
   )
 }
