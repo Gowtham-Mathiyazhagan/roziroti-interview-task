@@ -3,7 +3,7 @@ import NavBar from './components/NavBar'
 import Welcome from './components/Welcome'
 import Magical from './components/Magical'
 import Venues from './components/Venues'
-import Carousel from './Carousel'
+import Carousel from './components/Carousel'
 const App = () => {
   return (
     <>

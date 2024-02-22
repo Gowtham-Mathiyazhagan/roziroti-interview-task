@@ -498,8 +498,96 @@ Carousel components styling
 ********
 */
 
-.carousels-container{
+.carousels-container {
   height: 100vh;
   width: 100vw;
-  background-color: aqua;
+  padding: 0 100px;
+}
+.carousels-container .main-carousel {
+  height: 100%;
+  width: 4000px;
+  cursor: grab;
+}
+.carousels-container .main-carousel .inner-carousel {
+  display: flex;
+  padding: 20px 70px;
+}
+.carousels-container .main-carousel .inner-carousel .item {
+  height: 500px;
+  width: 500px;
+  margin-right: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.carousels-container .main-carousel .inner-carousel .item .hover-items {
+  opacity: 0;
+  transition: all 0.3s linear;
+  background-color: rgba(254, 110, 20, 0.7);
+  height: 500px;
+  width: 500px;
+}
+
+.carousels-container .main-carousel .inner-carousel .item:hover > .hover-items {
+  padding: 30px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.carousels-container .main-carousel .inner-carousel .item .hover-items .button {
+  background-color: transparent;
+  padding: 8px 25px;
+  color: #ffffff;
+  border-radius: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 203px;
+  border: 1px solid #ffffff;
+}
+
+.carousels-container
+  .main-carousel
+  .inner-carousel
+  .item
+  .hover-items
+  .button:hover
+  > .bi-arrow-right {
+  display: inline-block;
+  transform: translateX(8px);
+}
+
+.carousels-container .main-carousel .inner-carousel .item .hover-items .titles {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.carousels-container
+  .main-carousel
+  .inner-carousel
+  .item
+  .hover-items
+  .titles
+  h5 {
+  font-size: 35px;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+}
+hr {
+  width: 435px;
+  margin: 5px 0 15px 0;
+}
+
+.carousels-container
+  .main-carousel
+  .inner-carousel
+  .item
+  .hover-items
+  .titles
+  h6 {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
