@@ -652,6 +652,7 @@ greet-food-component components styling
 */
 
 .greet-food-component {
+  margin: 40px 0 100px 0;
 }
 .greet-food-component .title-and-para {
   min-height: 100vh;
@@ -704,13 +705,13 @@ Service components styling
 */
 
 .service-component {
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
-  background-color: aqua;
   display: grid;
   grid-template-columns: 30% 40% 30%;
-  padding: 0 60px 0 70px;
+  padding: 0 60px 0 100px;
   justify-items: flex-start;
+  margin-bottom: 100px;
 }
 
 .service-component :is(.service-left, .service-right) > div {
@@ -768,6 +769,6 @@ Service components styling
 .service-component .service-mid img {
   height: 90%;
   width: 100%;
-  border-top-left-radius:300px ;
-  border-top-right-radius:300px ;
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
 }

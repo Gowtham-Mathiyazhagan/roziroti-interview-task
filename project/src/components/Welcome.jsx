@@ -4,7 +4,7 @@ import img2 from "../assets/1.2-Holly-Sigafoos-Photo.jpg";
 import img3 from "../assets/1.3-Holly-Sigafoos-Photo.jpg";
 import img4 from "../assets/1.4-Lorely-Meza.jpg";
 const Welcome = () => {
-	const [block, setBlock] = useState(0)
+  const [block, setBlock] = useState(0);
   return (
     <div className="welcome-container">
       <div className="welcome-left">
@@ -25,13 +25,30 @@ const Welcome = () => {
       <div className="welcome-right">
         <div className="carousel">
           {data.map((val, ind) => {
-            return <img key={ind.toString()} src={val.img} alt={val.alt} className={block === ind ? "carousel-img carousel-block" :"carousel-img"} />;
+            return (
+              <img
+                key={ind.toString()}
+                src={val.img}
+                alt={val.alt}
+                className={
+                  block === ind ? "carousel-img carousel-block" : "carousel-img"
+                }
+              />
+            );
           })}
         </div>
         <div className="indicators">
           <span>
             {data.map((_, index) => {
-             return <button key={index.toString()} className={block === index ? "indicator indicator-block" : "indicator"} onClick={()=>setBlock(index)}></button>;
+              return (
+                <button
+                  key={index.toString()}
+                  className={
+                    block === index ? "indicator indicator-block" : "indicator"
+                  }
+                  onClick={() => setBlock(index)}
+                ></button>
+              );
             })}
           </span>
         </div>
