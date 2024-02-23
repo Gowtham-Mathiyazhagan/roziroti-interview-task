@@ -645,6 +645,12 @@ Business components styling
   padding: 0 70px;
 }
 
+/* 
+********
+greet-food-component components styling 
+********
+*/
+
 .greet-food-component {
 }
 .greet-food-component .title-and-para {
@@ -674,8 +680,6 @@ Business components styling
   width: 850px;
   margin: 30px 0;
 }
-.greet-food-component .title-and-para .button {
-}
 
 .greet-food-component .title-and-para .button {
   background-color: var(--primary-btn-color);
@@ -691,4 +695,75 @@ Business components styling
 .greet-food-component .title-and-para .button:hover > .bi-arrow-right {
   display: inline-block;
   transform: translateX(8px);
+}
+
+/* 
+********
+Service components styling 
+********
+*/
+
+.service-component {
+  height: 100vh;
+  width: 100vw;
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  padding: 0 60px 0 70px;
+}
+
+.service-component :is(.service-left, .service-right) > div {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+.service-component :is(.service-left, .service-right) > div h5 {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #14532d;
+  /* padding-bottom: 20px; */
+  font-family: "Playfair Display", serif;
+}
+
+.service-component :is(.service-left, .service-right) > div p {
+  padding-bottom: 20px;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 27px;
+  font-family: "Poppins", sans-serif;
+  width: 300px;
+}
+.service-component
+  :is(.service-left, .service-right)
+  :is(.first-child, .second-child)
+  .button {
+  background-color: var(--primary-btn-color);
+  padding: 8px 25px;
+  color: #ffffff;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.service-component
+  :is(.service-left, .service-right)
+  :is(.first-child, .second-child)
+  .button:hover {
+  background-color: var(--primary-btn-color-hover);
+}
+
+.service-component
+  :is(.service-left, .service-right)
+  :is(.first-child, .second-child)
+  .button:hover
+  > .bi-arrow-right {
+  display: inline-block;
+  transform: translateX(8px);
+}
+
+.service-component .service-mid img {
+  height: 90%;
+  width: 100%;
 }
