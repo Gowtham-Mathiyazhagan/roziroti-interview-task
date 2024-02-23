@@ -784,7 +784,7 @@ Happy components styling
 .happy-component {
   height: 100vh;
   width: 100vw;
-  background-color: #14532d;
+  background-color: #124526;
 }
 .happy-component .twofour {
   height: 100px;
@@ -815,4 +815,27 @@ Happy components styling
   background-color: var(--primary-btn-color);
   top: 65px;
   left: 25px;
+}
+
+.happy-component .title {
+  height: 150px;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+.happy-component .title h5 {
+  font-size: 55px;
+  font-weight: 300;
+  font-family: "Playfair Display", serif;
+}
+.happy-component .title p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 27px;
+  font-family: "Poppins", sans-serif;
+  width: 700px;
+  text-align: center;
 }
