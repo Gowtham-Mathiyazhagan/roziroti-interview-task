@@ -744,17 +744,19 @@ Service components styling
   :is(.service-left, .service-right)
   :is(.first-child, .second-child)
   .button {
-  background-color: var(--primary-btn-color);
   padding: 8px 25px;
   color: #ffffff;
   border-radius: 15px;
   cursor: pointer;
+  border: 1px solid var(--primary-btn-color);
+  color: #c2410c;
 }
 .service-component
   :is(.service-left, .service-right)
   :is(.first-child, .second-child)
   .button:hover {
-  background-color: var(--primary-btn-color-hover);
+  border-color: var(--primary-btn-color-hover);
+  color: #ea580c;
 }
 
 .service-component
@@ -771,4 +773,46 @@ Service components styling
   width: 100%;
   border-top-left-radius: 300px;
   border-top-right-radius: 300px;
+}
+
+/* 
+********
+Happy components styling 
+********
+*/
+
+.happy-component {
+  height: 100vh;
+  width: 100vw;
+  background-color: #14532d;
+}
+.happy-component .twofour {
+  height: 100px;
+  width: 100px;
+  border: 3px solid var(--primary-btn-color);
+  border-radius: 50%;
+  position: relative;
+  border-right-color: transparent;
+  top: -50px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.happy-component .twofour > div {
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  font-weight: 200;
+  color: var(--primary-btn-color);
+}
+.happy-component .twofour > div::after {
+  content: "";
+  position: absolute;
+  height: 23px;
+  width: 3px;
+  background-color: var(--primary-btn-color);
+  top: 65px;
+  left: 25px;
 }

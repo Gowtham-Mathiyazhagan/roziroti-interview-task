@@ -7,6 +7,7 @@ import Carousel from './components/Carousel'
 import Business from './components/Business'
 import GreetFood from './components/GreetFood'
 import Services from './components/Services'
+import HappyClients from './components/HappyClients'
 const App = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const App = () => {
     <Business/>
     <GreetFood/>
     <Services/>
+    <HappyClients/>
     </>
   )
 }
