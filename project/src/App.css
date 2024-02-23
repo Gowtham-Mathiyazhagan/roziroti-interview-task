@@ -710,6 +710,7 @@ Service components styling
   display: grid;
   grid-template-columns: 30% 40% 30%;
   padding: 0 60px 0 70px;
+  justify-items: flex-start;
 }
 
 .service-component :is(.service-left, .service-right) > div {
@@ -719,6 +720,7 @@ Service components styling
   justify-content: space-evenly;
   align-items: flex-start;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 .service-component :is(.service-left, .service-right) > div h5 {
   font-size: 30px;
@@ -766,4 +768,6 @@ Service components styling
 .service-component .service-mid img {
   height: 90%;
   width: 100%;
+  border-top-left-radius:300px ;
+  border-top-right-radius:300px ;
 }
