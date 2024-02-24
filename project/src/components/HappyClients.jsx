@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import img1 from "../assets/4.2-Lorely-Meza.jpg";
 import img2 from "../assets/4.1-Kay-McCoy.jpg";
 import img3 from "../assets/4.3-Desert-Born-Studios.jpg";
 import img4 from "../assets/4.4-Lorely-Meza.jpg";
 const HappyClients = () => {
+  const [imgIndex, setimgIndex] = useState(0);
   return (
     <div className="happy-component">
       <div className="twofour">
@@ -18,23 +20,35 @@ const HappyClients = () => {
         </p>
       </div>
       <div className="last-carousel">
-		{/* <div className="carousels">
-			{
-			  data.map((val,i)=>{
-                return <div key={val.name} className="item">
-					<div className="right">
-						<img src={val.img} alt="img" />
-					</div>
-					<div className="left">
-				    <p>{val.passage}</p>
-                    <h4>{val.name}</h4>
-					<h6>{val.job}</h6>
-					</div>
-				</div>
-			  })
-			}
-		</div> */}
-	  </div>
+        <motion.div
+          drag="x"
+          dragConstraints={{
+            right: 0,
+            left: 0,
+          }}
+          animate={{
+            translateX: "-300vw",
+          }}
+          className="carousels"
+        >
+          {data.map((val, i) => {
+            return (
+              <div key={val.name} className="item">
+                <div className="right">
+                  <img src={val.img} alt="img" />
+                </div>
+                <div className="left">
+                  <p>&#8220;{val.passage}&#8221;</p>
+                  <div>
+                    <p>{val.name}</p>
+                    <div className="p">{val.job}</div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </motion.div>
+      </div>
     </div>
   );
 };
@@ -45,7 +59,7 @@ let data = [
     passage:
       "The staff was top-notch – professional, hardworking, and just a pleasure to work with.",
     name: "ROBIN",
-    job: "Executive Assistant, Corelogic",
+    job: "Executive Assistant, Corelogic ",
   },
   {
     img: img2,
