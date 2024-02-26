@@ -1,11 +1,30 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 import img1 from "../assets/4.2-Lorely-Meza.jpg";
 import img2 from "../assets/4.1-Kay-McCoy.jpg";
 import img3 from "../assets/4.3-Desert-Born-Studios.jpg";
 import img4 from "../assets/4.4-Lorely-Meza.jpg";
 const HappyClients = () => {
   const [imgIndex, setimgIndex] = useState(0);
+  let drag_range = 50;
+  const dragx = useMotionValue(0);
+  function onDragStart() {}
+  function onDragEnd() {
+    // console.log()
+    let x = dragx.get();
+    if (x <= -drag_range && imgIndex < 3) {
+      setimgIndex((val) => val + 1);
+    }
+    else if(x <= -drag_range && imgIndex == 3){
+   setimgIndex(0)
+    }
+    else if (x >= drag_range && imgIndex > 0) {
+      setimgIndex((val) => val - 1);
+    }
+    else if(x >= drag_range && imgIndex == 0){
+      setimgIndex(3)
+       }
+  }
   return (
     <div className="happy-component">
       <div className="twofour">
@@ -27,8 +46,13 @@ const HappyClients = () => {
             left: 0,
           }}
           animate={{
-            translateX: "-300vw",
+            translateX: `-${imgIndex * 100}vw`,
           }}
+          style={{
+            x: dragx,
+          }}
+          onDragStart={onDragStart}
+          onDragEnd={onDragEnd}
           className="carousels"
         >
           {data.map((val, i) => {
@@ -48,6 +72,9 @@ const HappyClients = () => {
             );
           })}
         </motion.div>
+        <div className="carousel-nav">
+          
+        </div>
       </div>
     </div>
   );
