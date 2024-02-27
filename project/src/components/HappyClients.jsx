@@ -15,15 +15,17 @@ const HappyClients = () => {
     if (x <= -drag_range && imgIndex < 3) {
       setimgIndex((val) => val + 1);
     }
-    else if(x <= -drag_range && imgIndex == 3){
-   setimgIndex(0)
-    }
     else if (x >= drag_range && imgIndex > 0) {
       setimgIndex((val) => val - 1);
     }
-    else if(x >= drag_range && imgIndex == 0){
-      setimgIndex(3)
-       }
+  }
+  function navBtn(){
+    if (imgIndex < 3) {
+      setimgIndex((val) => val + 1);
+    }
+    else if(imgIndex == 3){
+   setimgIndex(0)
+    }
   }
   return (
     <div className="happy-component">
@@ -38,7 +40,9 @@ const HappyClients = () => {
           their day great.
         </p>
       </div>
-      <div className="last-carousel">
+      <div 
+      style={{cursor : "grab"}}
+      className="last-carousel">
         <motion.div
           drag="x"
           dragConstraints={{
@@ -54,10 +58,12 @@ const HappyClients = () => {
           onDragStart={onDragStart}
           onDragEnd={onDragEnd}
           className="carousels"
+          whileTap={{cursor :"grabbing"}}
         >
           {data.map((val, i) => {
             return (
-              <div key={val.name} className="item">
+              <div key={val.name}
+              className="item">
                 <div className="right">
                   <img src={val.img} alt="img" />
                 </div>
@@ -72,10 +78,28 @@ const HappyClients = () => {
             );
           })}
         </motion.div>
-        <div className="carousel-nav">
-          
-        </div>
       </div>
+      <div className="carousel-nav">
+        <div className="indicators">
+          <span>
+            {data.map((_, ind) => {
+              return (
+                <button
+                  key={ind.toString()}
+                  className={
+                     imgIndex === ind ? "indicator indicator-block" : "indicator"
+                  }
+                  onClick={() => setimgIndex(ind)}
+                ></button>
+              );
+            })}
+          </span>
+        </div>
+        <div className="nav-btn" onClick={navBtn}>
+            <span>NEXT TESTIMONIAL</span>
+            <i className="bi bi-arrow-right"></i>
+        </div>
+        </div>
     </div>
   );
 };
