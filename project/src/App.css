@@ -1134,3 +1134,131 @@ Cookin components styling
   color: #ea580c;
   border-color: #ea580c;
 }
+
+/* 
+********
+Experience components styling 
+********
+*/
+
+.experience-component {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: #124526; */
+  margin-top: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 100px;
+}
+.experience-component .logo {
+  position: relative;
+}
+.experience-component .logo img {
+  height: 100px;
+  width: 300px;
+  transform: rotate(15deg);
+  opacity: 0.2;
+}
+
+.experience-component .contant {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+.experience-component .contant .left h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 90px;
+  font-weight: 400;
+  text-align: left;
+  color: #14532d;
+  line-height: 90px;
+}
+
+.experience-component .contant .left p {
+  font-size: 15px;
+  font-weight: 200;
+  text-align: center;
+  line-height: 27px;
+  font-family: "Poppins", sans-serif;
+  width: 450px;
+  margin: 30px 0;
+  text-align: left;
+}
+.experience-component .contant .left .insta {
+  display: flex;
+  gap: 50px;
+}
+.experience-component .contant .left .insta-one {
+  letter-spacing: 5px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.experience-component .contant .left .insta-two {
+  letter-spacing: 5px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.experience-component .contant .left :is(.insta-one, .insta-two):hover {
+  color: #ea580c;
+}
+.experience-component .contant .right {
+  /* background-color: #757575; */
+  position: relative;
+}
+.experience-component .contant .right .img-one {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  top: 0px;
+  left: 300px;
+  transform: rotate(20deg);
+  padding: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(98, 98, 98, 0.7);
+  cursor: pointer;
+}
+
+.experience-component .contant .right .img-two {
+  height: 300px;
+  width: 200px;
+  position: relative;
+  top: -100px;
+  left: 90px;
+  transform: rotate(-20deg);
+  padding: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(98, 98, 98, 0.7);
+  cursor: pointer;
+}
+.experience-component .contant .right .img-three {
+  height: 175px;
+  width: 175px;
+  position: relative;
+  top: -200px;
+  left: 300px;
+  transform: rotate(20deg);
+  padding: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(98, 98, 98, 0.7);
+  cursor: pointer;
+  z-index: 5;
+}
+.experience-component .contant .right :is(.img-one, .img-two, .img-three) img {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+.experience-component .contant .right :is(.img-one, .img-two, .img-three) i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #ffffff;
+}
+.experience-component .contant .right :is(.img-one, .img-two,.img-three) img:hover {
+  opacity: 0.8;
+}
+.experience-component .contant .right .img-three {
+}

@@ -9,6 +9,7 @@ import GreetFood from './components/GreetFood'
 import Services from './components/Services'
 import HappyClients from './components/HappyClients'
 import Cookin from './components/Cookin'
+import { Experience } from './components/Experience'
 const App = () => {
   return (
     <>
@@ -22,6 +23,7 @@ const App = () => {
     <Services/>
     <HappyClients/>
     <Cookin/>
+    <Experience/>
     </>
   )
 }
