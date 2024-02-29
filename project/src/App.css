@@ -174,6 +174,8 @@ nav components styling
   padding: 5px 10px;
   color: #ffffff;
   border-radius: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
 }
 .nav-container .right :last-child:hover {
   color: #ffffff;
@@ -244,6 +246,8 @@ welcome container
   color: #ffffff;
   border-radius: 15px;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
 }
 .welcome-left .button:hover {
   background-color: var(--primary-btn-color-hover);
@@ -397,6 +401,8 @@ Magical components styling
   cursor: pointer;
   border: none;
   position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
 }
 .magical-right .group-info .details-info .sub-title > button:hover {
   background-color: var(--primary-btn-color-hover);
@@ -488,6 +494,8 @@ Venues components styling
   color: #ffffff;
   border-radius: 15px;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
 }
 .venues-component .circle-venue .circle-elements .button:hover {
   background-color: var(--primary-btn-color-hover);
@@ -552,8 +560,10 @@ Carousel components styling
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 203px;
+  width: 160px;
   border: 1px solid #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
 }
 
 .carousels-container
@@ -688,6 +698,8 @@ greet-food-component components styling
   color: #ffffff;
   border-radius: 15px;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
 }
 .greet-food-component .title-and-para .button:hover {
   background-color: var(--primary-btn-color-hover);
@@ -750,6 +762,8 @@ Service components styling
   cursor: pointer;
   border: 1px solid var(--primary-btn-color);
   color: #c2410c;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
 }
 .service-component
   :is(.service-left, .service-right)
@@ -931,4 +945,192 @@ Happy components styling
   cursor: pointer;
   border-radius: 50%;
   padding: 4px 8px;
+}
+
+/* 
+********
+Cookin components styling 
+********
+*/
+
+.cookin-component {
+  height: 120vh;
+  width: 100vw;
+  position: relative;
+}
+
+.cookin-component .title {
+  height: 400px;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  background-color: #124526;
+  padding-top: 100px;
+}
+.cookin-component .title h5 {
+  font-size: 55px;
+  font-weight: 300;
+  font-family: "Playfair Display", serif;
+}
+
+.cookin-component .contant {
+  display: flex;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-22%, -0%);
+  /* width: 100%; */
+  width: 1000px;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  margin-top: 100px;
+  gap: 50px;
+}
+.cookin-component .contant :is(.con-one, .con-two) {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+}
+
+.cookin-component .contant :is(.con-one, .con-two) .sub-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #ffffff;
+  width: 250px;
+  margin-top: 10px;
+  background-color: #c2410c;
+  border-radius: 20px;
+  padding: 5px 15px;
+  line-height: 15px;
+}
+.cookin-component .contant .con-two .sub-title {
+  background-color: #000000;
+}
+.cookin-component .contant :is(.con-one, .con-two) h5 {
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: "Playfair Display", serif;
+  padding: 20px 0px;
+}
+.cookin-component .contant :is(.con-one, .con-two) p {
+  font-family: "Poppins", sans-serif;
+  opacity: 0.8;
+  font-weight: 200;
+  line-height: 27px;
+  font-size: 15px;
+}
+.cookin-component .contant .con-one .img-sec {
+  height: 300px;
+  width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cookin-component .contant .con-one .img-sec img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.1s linear;
+}
+.cookin-component .contant .con-one .img-sec .hover-item {
+  height: 300px;
+  width: 600px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(254, 110, 20, 0.7);
+  transition: all 0.1s linear;
+}
+.cookin-component
+  .contant
+  :is(.con-one, .con-two)
+  .img-sec:hover
+  > .hover-item {
+  opacity: 1;
+}
+.cookin-component .contant :is(.con-one, .con-two) .img-sec:hover > img {
+  transform: scale(1.1);
+}
+
+.cookin-component
+  .contant
+  :is(.con-one, .con-two)
+  .img-sec
+  .hover-item
+  .button {
+  background-color: transparent;
+  padding: 8px 25px;
+  color: #ffffff;
+  border-radius: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 35px;
+  width: 140px;
+  border: 1px solid #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+.cookin-component
+  .contant
+  :is(.con-one, .con-two)
+  .img-sec
+  .hover-item
+  .button:hover
+  > .bi-arrow-right {
+  display: inline-block;
+  transform: translateX(8px);
+}
+
+.cookin-component .contant .con-two .img-sec {
+  height: 300px;
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cookin-component .contant .con-two .img-sec img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.1s linear;
+}
+.cookin-component .contant .con-two .img-sec .hover-item {
+  height: 300px;
+  width: 400px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(254, 110, 20, 0.7);
+  transition: all 0.1s linear;
+}
+
+.cookin-component .button {
+  position: absolute;
+  bottom: -200px;
+  left: 500px;
+  border: 1px solid #c2410c;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  background-color: transparent;
+  padding: 8px 25px;
+  color: #c2410c;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.cookin-component .button:hover > .bi-arrow-right {
+  display: inline-block;
+  transform: translateX(8px);
+}
+.cookin-component .button:hover {
+  color: #ea580c;
+  border-color: #ea580c;
 }
