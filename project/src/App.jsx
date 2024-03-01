@@ -10,6 +10,7 @@ import Services from './components/Services'
 import HappyClients from './components/HappyClients'
 import Cookin from './components/Cookin'
 import { Experience } from './components/Experience'
+import End from './components/End'
 const App = () => {
   return (
     <>
@@ -24,6 +25,7 @@ const App = () => {
     <HappyClients/>
     <Cookin/>
     <Experience/>
+    <End/>
     </>
   )
 }
